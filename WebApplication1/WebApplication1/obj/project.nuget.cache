@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "fUhYJ/qxp04=",
+  "success": true,
+  "projectFilePath": "/home/erneste/Downloads/Year 3/DOTNET/Self study/ASP.NET-CORE-API/WebApplication1/WebApplication1/WebApplication1.csproj",
+  "expectedPackageFiles": [
+    "/home/erneste/.nuget/packages/microsoft.aspnetcore.openapi/10.0.12/microsoft.aspnetcore.openapi.10.0.12.nupkg.sha512",
+    "/home/erneste/.nuget/packages/microsoft.openapi/2.12.0/microsoft.openapi.2.12.0.nupkg.sha512"
+  ],
+  "logs": []
+}
