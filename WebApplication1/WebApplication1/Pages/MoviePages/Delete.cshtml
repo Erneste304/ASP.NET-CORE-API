@@ -1,0 +1,22 @@
+@page
+@model WebApplication1.Pages.MoviePages.DeleteModel
+@{
+    ViewData["Title"] = "Delete movie";
+}
+
+<h1>Delete movie</h1>
+<p>Are you sure you want to delete this movie?</p>
+<dl>
+    <dt>Title</dt>
+    <dd>@Model.Movie.Title</dd>
+    <dt>Release date</dt>
+    <dd>@Model.Movie.ReleaseDate.ToString("yyyy-MM-dd")</dd>
+    <dt>Genre</dt>
+    <dd>@Model.Movie.Genre</dd>
+    <dt>Price</dt>
+    <dd>@Model.Movie.Price.ToString("C")</dd>
+</dl>
+<form method="post" asp-route-id="@Model.Movie.Id">
+    <button type="submit">Delete</button>
+    <a asp-page="./Index">Cancel</a>
+</form>

@@ -1,0 +1,32 @@
+@page
+@model WebApplication1.Pages.MoviePages.CreateModel
+@{
+    ViewData["Title"] = "Create movie";
+}
+
+<h1>Create movie</h1>
+<form method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+    <label asp-for="Movie.Title"></label>
+    <input asp-for="Movie.Title" />
+    <span asp-validation-for="Movie.Title"></span>
+
+    <label asp-for="Movie.ReleaseDate"></label>
+    <input asp-for="Movie.ReleaseDate" />
+    <span asp-validation-for="Movie.ReleaseDate"></span>
+
+    <label asp-for="Movie.Genre"></label>
+    <input asp-for="Movie.Genre" />
+    <span asp-validation-for="Movie.Genre"></span>
+
+    <label asp-for="Movie.Price"></label>
+    <input asp-for="Movie.Price" />
+    <span asp-validation-for="Movie.Price"></span>
+
+    <button type="submit">Create</button>
+</form>
+<p><a asp-page="./Index">Back to movies</a></p>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

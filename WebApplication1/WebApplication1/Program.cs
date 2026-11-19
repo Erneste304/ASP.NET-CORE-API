@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<TodoDb>(opt => opt.UseInMemoryDatabase("TodoList"));
 builder.Services.AddOpenApi();
+builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
@@ -11,6 +12,9 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
+
+app.MapGet("/", () => Results.Redirect("/MoviePages/Index"));
+app.MapRazorPages();
 
 var todoItems = app.MapGroup("/todoitems");
 

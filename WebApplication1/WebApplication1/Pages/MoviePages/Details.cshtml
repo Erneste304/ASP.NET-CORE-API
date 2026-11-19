@@ -1,0 +1,21 @@
+@page
+@model WebApplication1.Pages.MoviePages.DetailsModel
+@{
+    ViewData["Title"] = "Movie details";
+}
+
+<h1>Movie details</h1>
+<dl>
+    <dt>Title</dt>
+    <dd>@Model.Movie.Title</dd>
+    <dt>Release date</dt>
+    <dd>@Model.Movie.ReleaseDate.ToString("yyyy-MM-dd")</dd>
+    <dt>Genre</dt>
+    <dd>@Model.Movie.Genre</dd>
+    <dt>Price</dt>
+    <dd>@Model.Movie.Price.ToString("C")</dd>
+</dl>
+<p>
+    <a asp-page="./Edit" asp-route-id="@Model.Movie.Id">Edit</a> |
+    <a asp-page="./Index">Back to movies</a>
+</p>
